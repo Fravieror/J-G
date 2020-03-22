@@ -1,0 +1,58 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+<div align="center">
+    <input type="number" onchange="CheckValue(this);" onkeyup="ChangeValue(this);" class="cajita" maxlength="10" value="8866" />
+    <script>       
+        function ChangeValue(control) {
+            var inputValue =  document.querySelector("input[name='amount']");
+            inputValue.value = control.value;            
+        }
+        function CheckValue(control){
+            var inputValue =  document.querySelector("input[name='amount']");
+            if(control.value < 8866.00){
+                control.value = 8866.00;
+                inputValue.value = 8866.00;
+            }
+        }
+    </script>
+    <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8" target="_blank">
+          <center><input type="image" 
+    width="130px" border="0" alt="" src="https://static.wixstatic.com/media/e13549_d02abb1018ba472287f3bf8256705420~mv2.jpg" onClick="this.form.urlOrigen.value = window.location.href;"/></center>
+      <input name="buttonId" type="hidden" value="FaB/q5NM3Sg3Y3ObpPg6eU4kabbdqET5XynDM4M8QzSanmE9dwW2Qw=="/>
+      <input name="merchantId" type="hidden" value="564288"/>
+      <input name="accountId" type="hidden" value="811648"/>
+      <input name="description" type="hidden" value="Donaciones"/>
+          <input name="referenceCode" type="hidden" value="3"/>
+          <input name="amount" type="hidden" value="8866"/>
+          <input name="tax" type="hidden" value="0"/>
+          <input name="taxReturnBase" type="hidden" value="0.00"/>
+          <input name="shipmentValue" value="0.00" type="hidden"/>
+          <input name="currency" type="hidden" value="COP"/>
+          <input name="lng" type="hidden" value="es"/>
+          <input name="approvedResponseUrl" type="hidden" value="https://www.trabajandoporamor.org"/>
+          <input name="declinedResponseUrl" type="hidden" value="https://www.trabajandoporamor.org"/>
+          <input name="pendingResponseUrl" type="hidden" value="https://www.trabajandoporamor.org"/>
+          <input name="displayBuyerComments" type="hidden" value="true"/>
+          <input name="sourceUrl" id="urlOrigen" value="" type="hidden"/>
+          <input name="buttonType" value="SIMPLE" type="hidden"/>
+        <input name="signature" value="76eda43ef313bdb42efa4c2d6209e40c79ae5ded8c75d7e6646a31d14c4d04ed" type="hidden"/>
+        </form>
+       
+
+</div>
+<style type="text/css">
+    .cajita {
+        position: relative;
+        top: 0px;
+        color: #6d6d6d;
+        background-color: #ececec;
+        outline: none;
+        border: 0;
+        height: 43px;
+        width: 200px;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+</style>
